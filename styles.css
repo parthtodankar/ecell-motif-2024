@@ -3,6 +3,7 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: black;
+    font-family: Arial, sans-serif;
 }
 
 canvas {
@@ -11,5 +12,35 @@ canvas {
     top: 0;
     left: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+nav a {
+    color: white;
+}
+
+/* Ensure hero section content stays on top */
+.hero-section {
+    position: relative;
+    z-index: 1;
+    margin-top: 10rem;
+    
+}
+
+@font-face {
+    font-family: space-cursaders;
+    src: url(assests/fonts/Space\ Crusaders.otf) format(truetype);
+}
+
+h1, h2, img {
+    z-index: 1;
+  
+}
+
+h1  {
+    font-family: space-cursaders;
+    
+    
+    
 }

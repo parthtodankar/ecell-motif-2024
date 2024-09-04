@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Star Background</title>
+    <title>E-Cell Motif RAIT</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-black">
+    <!-- Navbar Container -->
+    <div class="bg-black border border-gray-600 rounded-full px-8 py-4 mx-auto mt-4 w-3/4">
+        <!-- Navbar Links -->
+        <nav class="flex justify-center space-x-8 text-orange-500 text-lg">
+            <a href="#" class="hover:text-orange-300">Home</a>
+            <a href="#" class="hover:text-orange-300">About Us</a>
+            <a href="#" class="hover:text-orange-300">Domains</a>
+            <a href="#" class="hover:text-orange-300">Events</a>
+            <a href="#" class="hover:text-orange-300">Team</a>
+            <a href="#" class="hover:text-orange-300">FAQ</a>
+            <a href="#" class="hover:text-orange-300">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="flex justify-start items-center h-screen px-8">
+        <!-- Left Side Content -->
+        <div class="flex flex-col items-start justify-center space-y-4">
+            <!-- Logo -->
+            <img src="your-logo-url.png" alt="Logo" class="w-32 mb-4"> <!-- Replace 'your-logo-url.png' with the path to your logo image -->
+            
+            <!-- Headings -->
+            <h1 id="heroh1" class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#fa824e] to-[#fee140]">E-CELL MOTIF</span>
+            </h1>
+            <h2 class="text-2xl font-light text-white">Ramrao Adik Institute of Technology</h2>
+        </div>
+    </section>
+
+    <!-- Canvas for star animation -->
     <canvas id="galaxyCanvas"></canvas>
     <script src="script.js"></script>
 </body>
