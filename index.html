@@ -9,12 +9,12 @@
 </head>
 <body class="bg-black">
     <!-- Navbar Container -->
-    <div  id="navBar" class="bg-black border border-gray-600 rounded-full px-6 py-6 mx-auto mt-4 w-3/6 fixed top-5 left-1/2 transform -translate-x-1/2 z-50">
+    <div id="navBar" class="bg-black border border-gray-600 rounded-full px-6 py-6 mx-auto mt-4 w-3/6 fixed top-5 left-1/2 transform -translate-x-1/2 z-50">
         <!-- Navbar Links -->
         <nav class="flex justify-center space-x-8 text-orange-700 text-lg">
             <a href="#" class="hover:text-orange-300">Home</a>
             <a href="#" class="hover:text-orange-300">About Us</a>
-            <a href="#" class="hover:text-orange-300">Domains</a>
+            <a href="domains.html" class="hover:text-orange-300">Domains</a>
             <a href="#" class="hover:text-orange-300">Events</a>
             <a href="#" class="hover:text-orange-300">Team</a>
             <a href="#" class="hover:text-orange-300">FAQ</a>
@@ -22,24 +22,20 @@
         </nav>
     </div>
 
-
-   
     <!-- Hero Section -->
     <section class="flex justify-end items-center h-screen px-8">
-        <img src="your-logo-url.png" alt="Logo" class="w-32 mb-4 flex justify-center items-center ">
+        <img src="your-logo-url.png" alt="Logo" class="w-32 mb-4 flex justify-center items-center">
         <!-- Left Side Content -->
         <div class="flex flex-col items-start justify-center space-y-4">
-            <!-- Logo -->
-             <!-- Replace 'your-logo-url.png' with the path to your logo image -->
-            
             <!-- Headings -->
             <h1 id="heroh1" class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-9xl">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#fa824e] to-[#ff7e57]">E-CELL MOTIF</span>
             </h1>
             <h2 class="text-2xl font-light text-transparent bg-clip-text bg-gradient-to-r from-[#fa824e] via-[#704d81]">
                 <span class="text-4xl">RAMRAO ADIK INSTITUTE OF TECHNOLOGY</span>
-              </h2>
-              
+            </h2>
+
+            <!-- Button -->
             <div class="relative button-container">
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transition-all duration-300 button-border" style="width: 0; height: 0; opacity: 0;"></div>
                 <button class="relative flex items-center px-6 py-3 bg-black text-white text-lg font-semibold rounded-full border border-gray-700">
@@ -47,22 +43,53 @@
                     Join Us!
                 </button>
             </div>
-        
         </div>
-    </section></br></br>
-
+    </section>
 
     <!-- About Us Section -->
     <section class="about-section">
         <div class="text">
             <h1 class="text-7xl font-bold mb-4 about-us">About Us</h1>
-            <p class="aboutPara">E-Cell, RAIT aims to induce an entrepreneurial mindset into the students and air an innovative streak in them.We are here to water the ‘Ideas’ in the bud and help them bloom into impactful endeavors through networking student enterprises from campus to incubators, 
-            seeding funds and angel investors to transform the newly proposed ideas into successful start-ups</p>
+            <p class="aboutPara text-justify max-w-l mx-auto mb-4 leading-relaxed">E-Cell, RAIT aims to induce an Entrepreneurial mindset into the students and air an innovative streak in them. We are here to water the <b>‘Ideas’</b> in the bud and help them bloom into impactful endeavors through networking student enterprises from campus to incubators, seeding funds and angel investors to transform the newly proposed ideas into successful start-ups.</p>
         </div>
         <div class="aboutImage">
-            <img src="imgs/undraw_invest_re_8jl5.svg" alt="About Us Image"> 
+            <img src="imgs/undraw_invest_re_8jl5.svg" alt="About Us Image">
         </div>
-    </section>
+    </section>
+
+    <!-- Domains Section (Card Grid) -->
+    <section class="domains-section flex flex-col items-center justify-center min-h-screen">
+        <!-- Add the Domains heading -->
+        <h1 class="text-4xl font-bold mb-8 text-center text-[#fa824e]">Domains</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center">Design</h2>
+                <p class="text-gray-400 flex justify-center text-justify">Enhance our online presence with a design that reflects our spirit and values.</p>
+            </div>
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center">Management</h2>
+                <p class="text-gray-400 flex justify-center text-justify">Efficiently manage and promote committee events with our support for scheduling, registration, and online promotion, ensuring every event runs smoothly.</p>
+            </div>
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center">Technical</h2>
+                <p class="text-gray-400 fflex justify-center text-justify">Handle website creation, technical interactions, and ongoing support to ensure everything functions seamlessly and efficiently.</p>
+            </div>
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center">Publicity</h2>
+                <p class="text-gray-400 flex justify-center text-justify">Raise awareness of committee events and activities through targeted campaigns, social media interaction, and strategies.</p>
+            </div>
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center">Content</h2>
+                <p class="text-gray-400 flex justify-center text-justify">Provide clear and engaging content about our activities, announcements, and resources to keep the community informed and connected.</p>
+            </div>
+            <div class="card bg-black text-white p-6 rounded-lg border border-gray-700">
+                <h2 class="text-lg font-bold mb-2 flex justify-center text-justify" >Post Production</h2>
+                <p class="text-gray-400 flex justify-center text-justify">Refine your media with expert video editing and social media post creation.</p>
+            </div>
+        </div>
+    </section>
+    
+    
 
     <!-- Canvas for star animation -->
     <canvas id="galaxyCanvas"></canvas>
