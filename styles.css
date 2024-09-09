@@ -4,33 +4,33 @@
 
 body {
     margin: 0;
-    overflow-x: hidden; /* Ensure no overflow on the x-axis */
+    overflow-x: hidden; 
     background-color: black;
     font-family: Arial, sans-serif;
-    height: 100%; /* Set height for scrolling */
+    height: 100%; 
 }
 
 canvas {
     display: block;
-    position: fixed; /* Fixed to stay in the background */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keep it behind all content */
+    z-index: -1; 
 }
 
 nav a {
     color: white;
 }
 
-/* Hero section styling */
+
 .hero-section {
     position: relative;
-    z-index: 1; /* Ensure it stays above the canvas */
-    margin-top: 4rem; /* Adjust to account for the fixed navbar */
-    padding: 2rem; /* Add padding for spacing */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
+    z-index: 1; 
+    margin-top: 4rem; 
+    padding: 2rem; 
+    min-height: 100vh; 
 }
 
 h1, h2, img {
@@ -54,14 +54,14 @@ h1 {
     color: var(--main-color);
 }
 
-/* About Us Section */
+
 .about-section {
     position: relative;
-    z-index: 1; /* Ensure it is above the canvas */
-    padding: 4rem 8rem; /* Add padding for spacing */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between;
-    color: white; /* Text color */
+    z-index: 1; 
+    padding: 4rem 8rem; 
+    display: flex; 
+    
+    color: white; 
 }
 
 .about-section h1 {
@@ -98,27 +98,58 @@ h1 {
 
 
 .card {
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: white; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
     transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card:hover {
     transform: scale(1.05); 
-    background: linear-gradient(45deg, #fa824e, #ff7e57); 
-    color: black; /* Change text color to black */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
-    border: none; /* Remove the border for a cleaner look */
+    background: linear-gradient(45deg, rgba(250, 130, 78, 0.8), rgba(255, 126, 87, 0.8)); 
+    color: black; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    border: none; 
+}
+
+
+
+.domains-section h1 {
+    font-size: 5rem; 
 }
 
 .domains-section h1 {
-    font-size: 5rem; /* Increase the size of the Domains heading */
-}
-
-.domains-section h1 {
-    font-size: 5rem; /* Increase the size of the Domains heading */
+    font-size: 5rem; 
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .domains-section p{
     font-size: 1.3rem;
 }
 .domains-section h2 {
     font-size: 1.6rem;
+}
+
+.domains-section h1 {
+    position: relative;
+    color: var(--main-color);
+}
+
+.domains-section h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.domains-section h1:hover::after {
+    width: 100%;
 }
