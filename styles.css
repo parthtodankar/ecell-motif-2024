@@ -4,33 +4,40 @@
 
 body {
     margin: 0;
-    overflow-x: hidden; /* Ensure no overflow on the x-axis */
+    overflow-x: hidden; 
     background-color: black;
     font-family: Arial, sans-serif;
-    height: 100%; /* Set height for scrolling */
+    height: 100%; 
 }
 
 canvas {
     display: block;
-    position: fixed; /* Fixed to stay in the background */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Keep it behind all content */
+    z-index: -1; 
 }
 
 nav a {
     color: white;
 }
 
-/* Hero section styling */
+#navBar {
+  background-color: rgba(255, 255, 255, 0.15); 
+  
+    backdrop-filter: blur(10px); 
+  
+}
+
+
 .hero-section {
     position: relative;
-    z-index: 1; /* Ensure it stays above the canvas */
-    margin-top: 4rem; /* Adjust to account for the fixed navbar */
-    padding: 2rem; /* Add padding for spacing */
-    min-height: 100vh; /* Ensure it covers the full viewport height */
+    z-index: 1; 
+    margin-top: 4rem; 
+    padding: 2rem; 
+    min-height: 100vh; 
 }
 
 h1, h2, img {
@@ -45,87 +52,88 @@ h1 {
 
 /* From Uiverse.io by satyamchaudharydev */ 
 .button {
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    padding-block: 0.5rem;
-    padding-inline: 1.25rem;
-    background-color:#fa824e;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffff;
-    gap: 10px;
-    font-weight: bold;
-    border: 3px solid #ffffff4d;
-    outline: none;
-    overflow: hidden;
-    font-size: 15px;
-    cursor: pointer;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    transform: scale(1.05);
-    border-color: #fff9;
-  }
-  
-  .button:hover .icon {
-    transform: translate(4px);
-  }
-  
-  .button:hover::before {
-    animation: shine 1.5s ease-out infinite;
-  }
-  
-  .button::before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0) 70%
-    );
-    top: 0;
-    left: -100px;
-    opacity: 0.6;
-  }
-  
-  @keyframes shine {
-    0% {
-      left: -100px;
-    }
-  
-    60% {
-      left: 100%;
-    }
-  
-    to {
-      left: 100%;
-    }
-  }
-  
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #fa824e;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+}
 
-/* About Us Section */
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+
 .about-section {
     position: relative;
-    z-index: 1; /* Ensure it is above the canvas */
-    padding: 4rem 8rem; /* Add padding for spacing */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between;
-    color: white; /* Text color */
+    z-index: 1; 
+    padding: 4rem 8rem; 
+    display: flex; 
+    
+    color: white; 
 }
 
 .about-section h1 {
+  padding: 1rem;
     color: var(--main-color);
 }
 
@@ -134,6 +142,7 @@ h1 {
 }
 
 .about-us::after {
+ 
     content: "";
     position: absolute;
     left: 0;
@@ -155,24 +164,46 @@ h1 {
 .aboutImage {
     min-width: 40rem;
     display: flex;
+    padding: 2rem;
 }
 
-/* Domains Section (Card Grid) */
+.about-section p {
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px); 
+}
+
+
 .card {
-    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15); 
+    color: white; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card:hover {
-    border-width: 2px;
-    border-image: linear-gradient(45deg, #fa824e, #ff7e57);
-    border-image-slice: 1;
-    box-shadow: 0 0 10px rgba(250, 130, 78, 0.5); /* Optional: adds a subtle glow effect */
-    background-color: #fa824e; /* Change background color to orange on hover */
-    color: black; /* Change font color to black on hover */
+    transform: scale(1.05); 
+    background: linear-gradient(45deg, rgba(250, 130, 78, 0.8), rgba(255, 126, 87, 0.8)); 
+    color: black; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    border: none; 
+}
+
+
+
+.domains-section h1 {
+    font-size: 5rem; 
 }
 
 .domains-section h1 {
-    font-size: 5rem; /* Increase the size of the Domains heading */
+    font-size: 5rem; 
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .domains-section p{
     font-size: 1.3rem;
@@ -181,13 +212,22 @@ h1 {
     font-size: 1.6rem;
 }
 
-.domains-section::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 5px; 
-  background-color: white;
-  transition: width 0.3s ease; 
-} 
+.domains-section h1 {
+    position: relative;
+    color: var(--main-color);
+}
+
+.domains-section h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.domains-section h1:hover::after {
+    width: 100%;
+}
