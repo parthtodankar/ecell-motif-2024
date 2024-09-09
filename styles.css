@@ -1,10 +1,10 @@
-* {
-  font-family: monospace;
+:root {
+    --main-color: #fa824e;
 }
 
 body {
     margin: 0;
-    overflow-x: hidden;  /* Ensure no overflow on the x-axis */
+    overflow-x: hidden; /* Ensure no overflow on the x-axis */
     background-color: black;
     font-family: Arial, sans-serif;
     height: 100%; /* Set height for scrolling */
@@ -20,11 +20,9 @@ canvas {
     z-index: -1; /* Keep it behind all content */
 }
 
-
 nav a {
     color: white;
 }
-
 
 /* Hero section styling */
 .hero-section {
@@ -39,49 +37,20 @@ h1, h2, img {
     z-index: 1;
 }
 
-h1  {
-    padding-right: 7rem;           
-    
-}
-
-/* typewriter css starts here */
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blinkTextCursor {
-  0% {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  50% {
-    border-right-color: transparent;
-  }
-  100% {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-}
-
-.typewriter-text {
-  overflow: hidden;
-  border-right: 0.15em solid rgba(255, 255, 255, 0.75);
-  white-space: nowrap;
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+h1 {
+    font-family: space-cursaders;
+    padding-right: 7rem;
 }
 
 
+/* From Uiverse.io by satyamchaudharydev */ 
 .button {
     position: relative;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     padding-block: 0.5rem;
     padding-inline: 1.25rem;
-    background-color: #fa824e;
+    background-color:#fa824e;
     border-radius: 9999px;
     display: flex;
     align-items: center;
@@ -146,8 +115,6 @@ h1  {
   }
   
 
-
-
 /* About Us Section */
 .about-section {
     position: relative;
@@ -156,31 +123,71 @@ h1  {
     display: flex; /* Flexbox for layout */
     justify-content: space-between;
     color: white; /* Text color */
-
-    
 }
+
+.about-section h1 {
+    color: var(--main-color);
+}
+
 .about-us {
     position: relative; 
-  }
-  
-  .about-us::after {
+}
+
+.about-us::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0;
     height: 5px; 
-    background-color: #fa824e;
+    background-color: white;
     transition: width 0.3s ease; 
-  }    
-  
-  .about-us:hover::after {
-    width: 25%; 
+}    
+
+.about-us:hover::after {
+    width: 39%; 
 }
-  
-.aboutPara{
-    font-size: 2rem;
+
+.aboutPara {
+    font-size: 30px;
 }
-.aboutImage{
+
+.aboutImage {
     min-width: 40rem;
+    display: flex;
 }
+
+/* Domains Section (Card Grid) */
+.card {
+    transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+    border-width: 2px;
+    border-image: linear-gradient(45deg, #fa824e, #ff7e57);
+    border-image-slice: 1;
+    box-shadow: 0 0 10px rgba(250, 130, 78, 0.5); /* Optional: adds a subtle glow effect */
+    background-color: #fa824e; /* Change background color to orange on hover */
+    color: black; /* Change font color to black on hover */
+}
+
+.domains-section h1 {
+    font-size: 5rem; /* Increase the size of the Domains heading */
+}
+.domains-section p{
+    font-size: 1.3rem;
+}
+.domains-section h2 {
+    font-size: 1.6rem;
+}
+
+.domains-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px; 
+  background-color: white;
+  transition: width 0.3s ease; 
+} 
