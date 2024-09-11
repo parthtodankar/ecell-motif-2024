@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 :root {
     --main-color: #fa824e;
 }
@@ -26,8 +31,7 @@ nav a {
 
 #navBar {
   background-color: rgba(255, 255, 255, 0.15); 
-  
-    backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px); 
   
 }
 
@@ -175,13 +179,35 @@ h1 {
 }
 
 
+.domains-section .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    }
+}
+
 .card {
     background-color: rgba(255, 255, 255, 0.15); 
     color: white; 
     border: 1px solid rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(10px); 
     transition: all 0.3s ease; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 0.8rem; 
+    height: 200px; 
+    display: flex; 
+    flex-direction: column; 
+    text-align: center; 
 }
 
 .card:hover {
@@ -190,6 +216,11 @@ h1 {
     color: black; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
     border: none; 
+}
+
+
+h2 {
+    margin-bottom: 1rem; 
 }
 
 
