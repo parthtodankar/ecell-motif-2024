@@ -1,3 +1,8 @@
+* {
+  font-family: monospace;
+}
+
+
 :root {
     --main-color: #fa824e;
 }
@@ -194,8 +199,8 @@ h1 {
 
 
 
-.domains-section h1 {
-    font-size: 5rem; 
+.domains-section  {
+  padding: 4rem 8rem 4rem 8rem
 }
 
 .domains-section h1 {
@@ -204,6 +209,8 @@ h1 {
     justify-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: relative;
+    color: var(--main-color);
 }
 .domains-section p{
     font-size: 1.3rem;
@@ -212,10 +219,6 @@ h1 {
     font-size: 1.6rem;
 }
 
-.domains-section h1 {
-    position: relative;
-    color: var(--main-color);
-}
 
 .domains-section h1::after {
     content: "";
@@ -231,3 +234,45 @@ h1 {
 .domains-section h1:hover::after {
     width: 100%;
 }
+
+#teamcard {
+
+  background-color: rgba(255, 255, 255, 0.15); 
+  color: white; 
+}
+
+#team-div {
+  margin: 4rem 8rem 4rem 8rem;
+}
+
+#team-section {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  color: var(--main-color);
+}
+#team-section h1 {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the text */
+}
+
+#team-section h1::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Center the line */
+  bottom: -10px;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+#team-section h1:hover::after {
+  width: 50%;
+}
+
