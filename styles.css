@@ -7,6 +7,11 @@
     --main-color: #fa824e;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     margin: 0;
     overflow-x: hidden; 
@@ -185,45 +190,33 @@ h1 {
     gap: 1.5rem;
 }
 
-@media (min-width: 640px) {
-    .domains-section .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    }
-}
-
-@media (min-width: 1024px) {
-    .domains-section .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    }
-}
 
 .card {
-    background-color: rgba(255, 255, 255, 0.15); 
-    color: white; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); 
-    transition: all 0.3s ease; 
-    border-radius: 0.8rem; 
-    height: 200px; 
-    display: flex; 
-    flex-direction: column; 
-    text-align: center; 
+    background-color: rgba(255, 255, 255, 0.15); /* Light translucent background */
+    color: white; /* Ensure text is white to contrast with the translucent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for visibility */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 0.5rem; /* Rounded corners */
+    display: flex; /* Flexbox for aligning content */
+    flex-direction: column; /* Column direction for flex items */
+    height: 300px; /* Full height to ensure uniformity */
+    overflow: scroll;
+    
 }
 
 .card:hover {
-    transform: scale(1.05); 
-    background: linear-gradient(45deg, rgba(250, 130, 78, 0.8), rgba(255, 126, 87, 0.8)); 
-    color: black; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
-    border: none; 
+    transform: scale(1.05); /* Pop-up effect on hover */
+    background: linear-gradient(45deg, rgba(250, 130, 78, 0.8), rgba(255, 126, 87, 0.8)); /* Gradient with slight opacity */
+    color: black; /* Change text color to black on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+    border: none; /* Remove the border for a cleaner look on hover */
 }
-
 
 h2 {
     margin-bottom: 1rem; 
 }
-
-
 
 .domains-section  {
   padding: 4rem 8rem 4rem 8rem
@@ -243,6 +236,8 @@ h2 {
 }
 .domains-section h2 {
     font-size: 1.6rem;
+
+    
 }
 
 
@@ -301,4 +296,36 @@ h2 {
 #team-section h1:hover::after {
   width: 50%;
 }
+
+
+@media (min-width: 640px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    }
+}
+
+.domains-section .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* For responsiveness */
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two columns on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .domains-section .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* Three columns on large screens */
+    }
+}
+
 
