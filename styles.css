@@ -202,7 +202,7 @@ h1 {
     display: flex; /* Flexbox for aligning content */
     flex-direction: column; /* Column direction for flex items */
     height: 300px; /* Full height to ensure uniformity */
-    overflow: scroll;
+    overflow: none;
     
 }
 
@@ -271,7 +271,7 @@ h2 {
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 10px #fa824e;
+    /* box-shadow: 0 4px 10px #fa824e; */
     transition: transform 0.3s ease-in-out;
     height: 600px; /* Set a consistent height */
     width: 100%; /* Set full width */
@@ -283,6 +283,7 @@ h2 {
     width: 100%; /* Full width for content */
     padding: 2rem;
 }
+
 
 
 
@@ -313,10 +314,11 @@ h2 {
 }
 
 #team-div {
-  margin: 4rem 8rem 4rem 8rem;
+  margin-left:   8rem;
+  margin-right: 8rem;
 }
 
-#team-section {
+.team-section h1 {
   font-size: 5rem;
   display: flex;
   justify-content: center;
@@ -325,17 +327,13 @@ h2 {
   position: relative;
   color: var(--main-color);
 }
-#team-section h1 {
-  position: relative;
-  display: flex;
-  justify-content: center; /* Center the text */
-}
 
-#team-section h1::after {
+
+
+.team-section h1::after {
   content: "";
   position: absolute;
-  left: 50%; /* Center the line */
-  transform: translateX(-50%); /* Center the line */
+  left: 0;
   bottom: -10px;
   width: 0;
   height: 5px;
@@ -343,8 +341,8 @@ h2 {
   transition: width 0.3s ease;
 }
 
-#team-section h1:hover::after {
-  width: 50%;
+.team-section h1:hover::after {
+  width: 100%;
 }
 
 
@@ -376,6 +374,12 @@ h2 {
     .domains-section .grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)); /* Three columns on large screens */
     }
+}
+
+
+.faq-container {
+  z-index: 1;
+  position: relative;
 }
 
 
