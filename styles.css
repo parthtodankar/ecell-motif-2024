@@ -311,6 +311,7 @@ h2 {
 
   background-color: rgba(255, 255, 255, 0.15); 
   color: white; 
+  backdrop-filter: blur(10px); 
 }
 
 #team-div {
@@ -345,6 +346,65 @@ h2 {
   width: 100%;
 }
 
+ .accordian{
+  background-color: rgba(255, 255, 255, 0.15); 
+  color: white; 
+  backdrop-filter: blur(10px); 
+  border-radius: 1rem;
+  
+}
+
+.faq-section h1 {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  color: var(--main-color);
+}
+
+.faq-section h1::after {
+  content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.faq-section h1:hover::after {
+  width: 100%;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.answer.active {
+  max-height: 16rem;
+}
+
+.icon {
+  margin-right: 1rem;
+  transition: transform 0.5s;
+}
+
+.icon.active {
+  transform: rotate(-180deg);
+}
+
+
 
 @media (min-width: 640px) {
     .domains-section .grid {
@@ -377,9 +437,6 @@ h2 {
 }
 
 
-.faq-container {
-  z-index: 1;
-  position: relative;
-}
+
 
 
