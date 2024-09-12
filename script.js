@@ -81,3 +81,46 @@ initStars();
 animate();
 
 // temcard
+
+//Events
+let slideIndex = 0;
+let slides = document.getElementsByClassName("event-slide");
+
+// Show the first slide initially
+showSlides(slideIndex);
+
+// Automatic Slideshow
+let autoSlideInterval = setInterval(function() {
+    changeSlide(1);
+}, 5000); // Change slide every 5 seconds
+
+// Show a specific slide
+function showSlides(index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[index].style.display = "flex"; // Use 'flex' to maintain layout
+}
+
+// Change slide when next or previous button is clicked
+function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) { 
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    showSlides(slideIndex);
+}
+
+// Event listeners for buttons
+document.querySelector('.prev').addEventListener('click', function() {
+    clearInterval(autoSlideInterval); // Stop automatic slideshow when manual control is used
+    changeSlide(-1);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    clearInterval(autoSlideInterval); // Stop automatic slideshow when manual control is used
+    changeSlide(1);
+});
+
