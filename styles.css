@@ -426,6 +426,13 @@ h2 {
   border: none; /* Remove the border for a cleaner look on hover */
 }
 
+#footer{
+  background-color:rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px); 
+}
+
+
+
 @media (min-width: 640px) {
     .domains-section .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)); 
