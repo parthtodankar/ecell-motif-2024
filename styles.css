@@ -406,6 +406,26 @@ h2 {
 
 
 
+#contact h1{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 5rem;
+}
+#contactGrid{
+  background-color:rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px); 
+  transition: all 0.3s ease;
+}
+
+
+#contactGrid:hover {
+  transform: scale(1.05); /* Pop-up effect on hover */
+  background: linear-gradient(45deg, rgba(250, 130, 78, 0.8), rgba(255, 126, 87, 0.8)); /* Gradient with slight opacity */
+  color: black; /* Change text color to black on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+  border: none; /* Remove the border for a cleaner look on hover */
+}
+
 @media (min-width: 640px) {
     .domains-section .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)); 
