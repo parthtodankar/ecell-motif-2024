@@ -256,6 +256,56 @@ h2 {
     width: 100%;
 }
 
+/* events section starts here  */
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Set to full width */
+    padding-left: 128px;
+    padding-right: 128px;
+    margin: 0 auto;
+}
+
+.event-card {
+    display: flex; /* For two-column layout */
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #fa824e;
+    transition: transform 0.3s ease-in-out;
+    height: 600px; /* Set a consistent height */
+    width: 100%; /* Set full width */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    min-width: 300px; /* Ensure a minimum width for responsiveness */
+}
+
+.event-info {
+    width: 100%; /* Full width for content */
+    padding: 2rem;
+}
+
+
+
+.event-slide {
+    display: none; /* Hidden by default */
+}
+
+.event-slide.active {
+    display: flex; /* Show active slide with Flexbox to maintain full height */
+    width: 100%; /* Ensure full width */
+}
+
+#events p{
+    font-size: 30px;
+    color: white;
+}
+
+#events h1{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 5rem;
+}
+
 #teamcard {
 
   background-color: rgba(255, 255, 255, 0.15); 
